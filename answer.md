@@ -80,7 +80,9 @@ def cutting_string(arr, size):
     res = [x[:] for x in [[0]*n]*n]
     for i in range(2, n):
         for x in range(0, n-i):
-            res[x][x+i] = arr[x+i] - arr[x] + min([res[x+1][y] + res[y][x+i] for y in range(x+1, x+i)])
+            res[x][x+i] = arr[x+i] - arr[x] + min([res[x][y] + res[y][x+i] for y in range(x+1, x+i)])
+    # for each in res:
+    #     print(each)
     return res[0][n-1]
 
 ```
