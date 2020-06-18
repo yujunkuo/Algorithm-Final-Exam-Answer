@@ -1,20 +1,20 @@
 # Code Test
 
-## Q1
+## Q1.
 
 ```python
 
 
 ```
 
-## Q2
+## Q2.
 
 ```python
 
 
 ```
 
-## Q3
+## Q3.
 
 ```python
 
