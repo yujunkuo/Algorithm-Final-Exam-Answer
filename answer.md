@@ -3,19 +3,17 @@
 ## Q1. Divide and Conquer: Missing Number
 
 ```python
-def search(ar, size): 
+def search_missing(arr, size): 
     i = 0
     j = size - 1
     mid = 0
     while j > i + 1: 
         mid = (i + j) // 2
-        if (ar[i] - i) != (ar[mid] - mid): 
+        if (arr[i] - i) != (arr[mid] - mid): 
             j = mid 
-        # elif (ar[j] - j) != (ar[mid] - mid): 
-        #     i = mid 
         else:
             i = mid
-    return ar[mid] + 1
+    return arr[mid] + 1
 
 ```
 
