@@ -20,6 +20,7 @@ def search_missing(arr, size):
 ```
 
 ## Q2. Graph: Topological Sort
+- Time Complexity: O(M+N)
 
 ```python
 
