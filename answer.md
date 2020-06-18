@@ -31,11 +31,6 @@ class GraphVertex:
         self.processed = False
         self.parent = None  # The vertex discovers me 
         self.edges = []  # Edges in Adjacency List
-    def __str__(self):
-        output = "{0}(d={1}): ".format(self.label, self.d)
-        for e in self.edges:
-            output += "{0}->{1} ".format(self.label, e.label)
-        return output
 
 def DFS(v:GraphVertex): 
     v.discovered = True 
