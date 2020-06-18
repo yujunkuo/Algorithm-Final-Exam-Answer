@@ -1,6 +1,7 @@
 # Code 
 
 ## Q1. Divide and Conquer: Missing Number
+    - Time Complexity: O(logN)
 
 ```python
 def search_missing(arr, size): 
