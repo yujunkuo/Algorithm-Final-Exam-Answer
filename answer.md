@@ -65,6 +65,11 @@ def process_edge(i:GraphVertex, j:GraphVertex):
 
 ```python
 
+def construct_candidate(a:list, inputs:list, c:list):
+    curr_index = len(a) + 1
+    for i in inputs:
+        if (i not in a) and (i != curr_index) :
+            c.append(i)
 
 ```
 
