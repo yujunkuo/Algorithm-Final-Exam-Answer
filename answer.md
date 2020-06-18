@@ -73,8 +73,14 @@ def construct_candidate(a:list, inputs:list, c:list):
 ```python
 
 def cutting_string(arr, size):
-    n = len(arr) + 2
+    arr = arr.copy()
+    arr.insert(0, 0)
+    arr.append(size)
+    n = len(arr)
     res = [x[:] for x in [[0]*n]*n]
-
+    for i in range(2, n):
+        for x in range(0, n-i):
+            res[x][x+i] = arr[x+i] - arr[x] + min([res[x+1][y] + res[y][x+i] for y in range(x+1, x+i)])
+    return res[0][n-1]
 
 ```
