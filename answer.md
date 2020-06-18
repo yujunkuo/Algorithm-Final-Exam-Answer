@@ -63,7 +63,7 @@ def process_edge(i:GraphVertex, j:GraphVertex):
 def construct_candidate(a:list, inputs:list, c:list):
     curr_index = len(a) + 1
     for i in inputs:
-        if (i not in a) and (i != curr_index) :
+        if (i not in a) and (i != curr_index):
             c.append(i)
 
 ```
@@ -71,6 +71,10 @@ def construct_candidate(a:list, inputs:list, c:list):
 ## Q4. Dynamic Programming: Cutting String
 
 ```python
+
+def cutting_string(arr, size):
+    n = len(arr) + 2
+    res = [x[:] for x in [[0]*n]*n]
 
 
 ```
