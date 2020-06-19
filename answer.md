@@ -19,6 +19,24 @@ def search_missing(arr, size):
 
 ```
 
+```python
+
+def find_missing(a:list, m:int, n:int)->int:
+    if a[-1] == n:
+        return a[-1] + 1
+    if a[0] != 0:
+        return 0
+    mid = 0
+    while n > m + 1: 
+        mid = (m + n) // 2
+        if a[mid] != mid:
+            n = mid 
+        else:
+            m = mid
+    return a[m] + 1
+    
+```
+
 ## Q2. Graph: Topological Sort
 - Time Complexity: O(M+N)
 
