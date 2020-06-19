@@ -19,6 +19,8 @@ def search_missing(arr, size):
 
 ```
 
+- New
+
 ```python
 
 def find_missing(a:list, m:int, n:int)->int:
@@ -87,6 +89,8 @@ def construct_candidate(a:list, inputs:list, c:list):
 
 ```
 
+- New
+
 ```python
 
 def is_a_solution(a:list, inputs:list)->bool:
@@ -117,6 +121,8 @@ def cutting_string(arr, size):
     return res[0][n-1]
 
 ```
+
+- New
 
 ```python
 
