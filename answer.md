@@ -87,6 +87,18 @@ def construct_candidate(a:list, inputs:list, c:list):
 
 ```
 
+```python
+
+def is_a_solution(a:list, inputs:list)->bool:
+    return True if len(a) == len(inputs) else False
+
+def construct_candidate(a:list, inputs:list, c:list):
+    for i in inputs:
+        if (i not in a) and (i != len(a)):
+            c.append(i)
+            
+```
+
 ## Q4. Dynamic Programming: Cutting String
 
 ```python
@@ -103,5 +115,17 @@ def cutting_string(arr, size):
     # for each in res:
     #     print(each)
     return res[0][n-1]
+
+```
+
+```python
+
+def cut_str(cuts:list, m:int, n:int)->int:
+    c = [x[:] for x in [[0]*len(cuts)]*len(cuts)]
+    n = len(cuts)
+    for i in range(2, n):
+        for x in range(0, n-i):
+            c[x][x+i] = cuts[x+i] - cuts[x] + min([c[x][y] + c[y][x+i] for y in range(x+1, x+i)])
+    return c[0][n-1]
 
 ```
